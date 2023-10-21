@@ -21,10 +21,18 @@
 </li>
 <li>Create an express application: const app = express()</li>
 <li>Only creating application will do nothing so application listen is needed </br>
-    listen means we have to create a http server and the server will be created by node js and express, we need just to create a configuration in which port server will be running and a callback function to print our server is running</br>
-    app.listen(4000,()=>{
+    listen means we have to create a http server and the server will be created by node js and express, we need just to create a configuration in which port server will be running and a callback function to print our server is running and install nodemon for auto server running</br>
+    const port = process.env.PORT || 5000; <br>
+    app.listen(5000,()=>{</br>
         console.log('our server is running..');
     })
 </li>
 <li>Run the application on terminal: npm start</li>
+<li>We can see the server data on browser: localhost/5000 or 127.0.0.1/5000</li>
+<li>User can get different data at different route on server so we have to handle each route</br>
+app.get('/',(req, res)=>{</br>
+    res.send('Server is active and running on root route');</br>
+})
+</li>
+<li>Whenever we made changes to server we have to restart our server: nodemon index.js (if our machine has installed nodemon)</li>
 </ol>
