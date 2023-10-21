@@ -32,7 +32,8 @@
 <li>User can get different data at different route on server so we have to handle each route</br>
 app.get('/',(req, res)=>{</br>
     res.send('Server is active and running on root route');</br>
-})
+}) </br>
+<i>get means users want to get resources from server</i>
 </li>
 <li>Whenever we made changes to server we have to restart our server: nodemon index.js (if our machine has installed nodemon then we don't handle manually so nodemon has done this for us (npm i -D nodemon))</li>
 </ol>
@@ -50,3 +51,21 @@ app.get('/',(req, res)=>{</br>
     2. If server want to send pdf as response using res.attachment() and user can download a pdf in this route.
     3. Server can send json object as response using res.json({message: "Hello World"})
     4. Using template string we can send html as response using res.send(`<h1>Hello</h1>`) 
+
+<h3>Send HTML file to server as response</h3>
+<ol>
+<li>A default module is given by node.js so inport fs module: const fs = require('fs')</li>
+<li>in fs module there is readFile() function and provide the path name of html in first parameter and after reading send a callback method (using this either data or error)
+</br>if error occur then error object will be send else data</br>
+ fs.readFile('pathname', (err, data)=>{</br>
+ if(err){</br> 
+    console.log('Error occured!);</br>
+    res.send('Something went wrong!);</br>
+    }</br>
+    else{</br>
+        res.write(data);</br>
+        res.end();</br>
+    }<br>
+ })
+ </li>
+</ol>
