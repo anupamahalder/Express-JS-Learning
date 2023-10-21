@@ -56,6 +56,11 @@ app.get('/',(req, res)=>{
     // res.send('Hello user! our server is active and running...');
 })
 
+//handle about route
+app.get('/about',(req, res)=>{
+    res.send('Know me, I am a developer!');
+})
+
 //listen the application on a given port
 app.listen(port, ()=>{
     console.log(`Our server is running on port ${port}...`);

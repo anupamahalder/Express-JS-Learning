@@ -34,11 +34,19 @@ app.get('/',(req, res)=>{</br>
     res.send('Server is active and running on root route');</br>
 })
 </li>
-<li>Whenever we made changes to server we have to restart our server: nodemon index.js (if our machine has installed nodemon)</li>
+<li>Whenever we made changes to server we have to restart our server: nodemon index.js (if our machine has installed nodemon then we don't handle manually so nodemon has done this for us (npm i -D nodemon))</li>
 </ol>
 
 ### NOTE: 
-    1. Server can provide any kind of response like html, json, normal text, xml, image, pdf, video, etc. Any file that can possible to send via internet can server provide as response to the user using res.send().
+    0. For each route need to be handled separately with same signature 
+        <p>
+            <h5>function handler(req, res, next){</h5>
+            <h5>//read request object</h5>
+            <h5>process request</h5>
+            <h5>response back the result</h5>
+            }
+        <p>
+    1. Server can provide any kind of response like html, json, normal text, xml, image,</br> pdf, video, etc. Any file that can possible to send via internet can server </br>provide as response to the user using res.send().
     2. If server want to send pdf as response using res.attachment() and user can download a pdf in this route.
     3. Server can send json object as response using res.json({message: "Hello World"})
     4. Using template string we can send html as response using res.send(`<h1>Hello</h1>`) 
