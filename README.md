@@ -36,3 +36,9 @@ app.get('/',(req, res)=>{</br>
 </li>
 <li>Whenever we made changes to server we have to restart our server: nodemon index.js (if our machine has installed nodemon)</li>
 </ol>
+
+### NOTE: 
+    1. Server can provide any kind of response like html, json, normal text, xml, image, pdf, video, etc. Any file that can possible to send via internet can server provide as response to the user using res.send().
+    2. If server want to send pdf as response using res.attachment() and user can download a pdf in this route.
+    3. Server can send json object as response using res.json({message: "Hello World"})
+    4. Using template string we can send html as response using res.send(`<h1>Hello</h1>`) 
