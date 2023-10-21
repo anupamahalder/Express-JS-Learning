@@ -4,6 +4,7 @@
   "description": "# To make a NODE JS project steps we have to follow-- <ol> <h2>On Terminal or Command Prompt--</h2> <li>npm init -y</li> <li></li> <li></li> </ol>",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anupama Halder",
